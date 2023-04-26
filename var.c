@@ -1,4 +1,4 @@
-#include "shell.h"
+#include "simple_shell.h"
 
 /**
  * test_chain - test if current char in buffer is a chain delimeter
