@@ -60,7 +60,19 @@ void sigintHandler(__attribute__((unused))int sig_num);
 int _getline(info_t *info, char **ptr, size_t *length);
 ssize_t read_buf(info_t *info, char *buffer, size_t *i);
 ssize_t get_input(info_t *info);
-ssize_t input_buf(info_t *info, char **buffer, size_t *len);
+ssize_t input_buffer(info_t *info, char **buffer, size_t *len);
+int _setenv(info_t *info, char *v, char *value);
+int _unsetenv(info_t *info, char *v);
+char **get_environ(info_t *info);
+void free_info(info_t *info, int all);
+void clear_info(info_t *info);
+void init_info(info_t *info, char **av);
+int build_history(info_t *info, char *buffer, int lcount);
+int renumber_history(info_t *info);
+int read_history(info_t *info);
+int write_history_file(info_t *info);
+char *get_history(info_t *info);
+
 
 /**
  * struct builtin - contains a builtin string and related function
