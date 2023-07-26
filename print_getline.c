@@ -1,3 +1,4 @@
+#include "shell.h"
 #include <unistd.h>
 #include <string.h>
 #include <stdlib.h>
@@ -47,3 +48,5 @@ int main(void)
 		char newline[] = "\n";
 		write(STDOUT_FILENO, buffer, strlen(buffer));
 		write(STDOUT_FILENO, newline, strlen(newline));
+	}
+}
